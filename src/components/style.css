@@ -1,0 +1,31 @@
+.subscribe {
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+}
+
+hr {   /* My horizontal rule class */
+  border: 0;
+  border-top: 2px solid #7AB55C;
+  margin: 0;
+  width: 1em;
+}
+
+.error {
+  font-size: 12px;
+  color: #C23628;
+}
+
+form {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* form p {
+  margin-top: 1.5em;
+} */
+
+#button {
+  color: #FFF;
+  background-color: #5C6AC4;
+}
