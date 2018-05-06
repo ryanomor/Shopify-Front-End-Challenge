@@ -44,3 +44,72 @@ form div {
   padding: 1pc;
   margin-right: 0;
 }
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  .thankyou h3 {
+    font-size: 16px;
+  }
+
+  .thankyou p {
+    font-size: 14px;
+  }
+
+  form,
+  #button {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .thankyou h3 {
+    font-size: 16px;
+  }
+
+  .thankyou p {
+    font-size: 14px;
+  }
+
+  form,
+  #button {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+  h1 {
+    font-size: 21px;
+  }
+
+  .thankyou h3 {
+    font-size: 18px;
+  }
+
+  .thankyou p {
+    font-size: 16px;
+  }
+
+  form,
+  #button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 42px;
+  }
+}
