@@ -1,7 +1,7 @@
 .subscribe {
   margin: 0 auto;
+  margin-top: 2em;
   width: 80%;
-  text-align: left;
 }
 
 hr {   /* My horizontal rule class */
@@ -12,20 +12,35 @@ hr {   /* My horizontal rule class */
 }
 
 .error {
-  font-size: 12px;
+  font-size: 14px;
   color: #C23628;
+  margin: 0;
+  font-weight: bold;
 }
 
 form {
   margin: 0;
-  font-size: 16px;
+  margin-top: 3em;
+  font-size: 18px;
 }
 
-/* form p {
-  margin-top: 1.5em;
-} */
+form div {
+  font-weight: 200;
+}
+
+.thankyou {
+  margin-top: 1em;
+}
+
+.thankyou p {
+  font-size: 18px;
+  font-weight: 200;
+}
 
 #button {
   color: #FFF;
   background-color: #5C6AC4;
+  font-size: 18px;
+  padding: 1pc;
+  margin-right: 0;
 }

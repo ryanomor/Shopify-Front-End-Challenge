@@ -15,15 +15,18 @@ class App extends Component {
 
     this.state = {
       emailInput: "",
-      message: "Please enter a valid email address",
-      category: "",
-      button: "Sign up now"
+      message: "",
+      interest: "",
+      buttonText: "Sign up now",
+      submitted: false
     };
   }
 
-  handleChange = e => {
+  handleChange = (e, { name, value }) => {
+    console.log(value);
     this.setState({
-      [e.target.name]: e.target.value
+      [name]: value,
+      message: ""
     });
   };
 
@@ -33,19 +36,38 @@ class App extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { emailInput, category } = this.state;
+    const { emailInput, interest } = this.state;
     const isValid = this.validateEmail(emailInput);
 
     if (!isValid) {
       this.setState({
+        emailInput: "",
         message: "Please enter a valid email address"
       });
       return;
+    } else if (!interest) {
+      this.setState({
+        message: "Please select an interest"
+      });
+      return;
     }
+
+    setTimeout(() => {
+      this.setState({
+        submitted: true,
+        emailInput: "",
+        interest: ""
+      });
+    }, 2000);
+
+    this.setState({
+      message: "",
+      buttonText: "Submitting..."
+    });
   };
 
   render() {
-    const { emailInput, message, category, button } = this.state;
+    const { emailInput, message, buttonText, submitted } = this.state;
     return (
       <div className="subscribe">
         <Grid>
@@ -56,53 +78,51 @@ class App extends Component {
           </Grid.Row>
           <hr />
         </Grid>
-
-        <form>
+        {submitted ? (
           <Grid>
             <Grid.Row>
-              <p style={{ marginTop: "3em" }}>
-                Subscribe for free marketing tips
-              </p>
-            </Grid.Row>
-            <Grid.Row columns={2}>
-              <Grid.Column>
-                <Input
-                  name="email"
-                  size="medium"
-                  fluid
-                  input={emailInput}
-                  onChange={this.handleChange}
-                  placeholder="Email Address"
-                />
-              </Grid.Column>
-              {" "}
-              <Grid.Column>
-                <Dropdown
-                  name="category"
-                  fluid
-                  icon='dropdown'
-                  selection
-                  // value={category}
-                  placeholder="Interest in..."
-                  onChange={this.handleChange}
-                  options={this.interestCategories}
-                />
-              </Grid.Column>
-              {message ? <p className="error"> {message} </p> : ""}
-            </Grid.Row>
-            <Grid.Row>
-              <Button
-                id="button"
-                role="button"
-                fluid
-                onSubmit={this.handleSubmit}
-              >
-                {" "}
-                {button}{" "}
-              </Button>
+              <div className="thankyou">
+                <h3>Thanks for subscribing</h3>
+                <p>You'll start receiving free tips and resources soon.</p>
+              </div>
             </Grid.Row>
           </Grid>
-        </form>
+        ) : (
+          <form>
+            <Grid>
+              <Grid.Row>Subscribe for free marketing tips</Grid.Row>
+              <Grid.Row columns={2}>
+                <Grid.Column style={{ paddingLeft: 0 }}>
+                  <Input
+                    name="emailInput"
+                    size="medium"
+                    fluid
+                    value={emailInput}
+                    onChange={this.handleChange}
+                    placeholder="Email Address"
+                  />
+                </Grid.Column>
+                <Grid.Column textAlign="right" style={{ paddingRight: 0 }}>
+                  <Dropdown
+                    name="interest"
+                    icon="dropdown"
+                    fluid
+                    selection
+                    placeholder="Interest in..."
+                    onChange={this.handleChange}
+                    options={this.interestCategories}
+                  />
+                </Grid.Column>
+              </Grid.Row>
+              {message ? <p className="error"> {message} </p> : ""}
+              <Grid.Row>
+                <Button id="button" fluid onClick={this.handleSubmit}>
+                  {buttonText}
+                </Button>
+              </Grid.Row>
+            </Grid>
+          </form>
+        )}
       </div>
     );
   }
