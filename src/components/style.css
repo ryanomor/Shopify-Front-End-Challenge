@@ -58,6 +58,10 @@ form div {
     font-size: 14px;
   }
 
+  .error {
+    font-size: 12px;
+  }
+
   form,
   #button {
     font-size: 14px;
@@ -75,6 +79,10 @@ form div {
 
   .thankyou p {
     font-size: 14px;
+  }
+
+  .error {
+    font-size: 12px;
   }
 
   form,
