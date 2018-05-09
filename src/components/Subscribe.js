@@ -76,8 +76,9 @@ class App extends Component {
         <hr />
 
         {submitted ? (
-          <Thanks />
+          <Thanks /> // render the thank you component if submitted is true
         ) : (
+          // render the form component if submitted is false
           <Form 
             emailInput={emailInput}
             interest={interest}
