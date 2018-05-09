@@ -4,40 +4,42 @@
   max-width: 562px;
 }
 
-header {
+#header {
   margin-right: 1.5em;
 }
 
-header h1 {
+#header h1 {
   font-size: 24px;
 }
 
-hr {   /* My horizontal rule class */
+hr {
+  /* My horizontal rule class */
   border: 0;
-  border-top: 2px solid #7AB55C;
+  border-top: 2px solid #7ab55c;
   margin: 0;
   width: 1em;
 }
 
-input[type=text] {
+input[type="text"] {
   margin-right: 12px;
   width: 60%;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
-  font-family: Helvetica, 'Helvetica Neue', sans-serif;
+  font-family: Helvetica, "Helvetica Neue", sans-serif;
   font-size: 16px;
   padding: 0.67857143em 1em;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
   -webkit-transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: box-shadow 0.1s ease, border-color 0.1s ease;
-  transition: box-shadow 0.1s ease, border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease, border-color 0.1s ease,
+    -webkit-box-shadow 0.1s ease;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 input::-webkit-input-placeholder {
@@ -64,7 +66,7 @@ select {
   cursor: pointer;
 
   /* reset */
-  margin: 0;      
+  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -77,18 +79,12 @@ select:focus {
 }
 
 select.minimal {
-  background-image:
-    linear-gradient(45deg, transparent 50%, gray 50%),
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
     linear-gradient(135deg, gray 50%, transparent 50%),
     linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 22px) calc(1em + 3px),
-    calc(100% - 16px) calc(1em + 3px),
-    calc(100% - 2.5em) 0.5em;
-  background-size:
-    13px 6px,
-    8px 7px,
-    1.5px 1.5em;
+  background-position: calc(100% - 22px) calc(1em + 3px),
+    calc(100% - 16px) calc(1em + 3px), calc(100% - 2.5em) 0.5em;
+  background-size: 13px 6px, 8px 7px, 1.5px 1.5em;
   background-repeat: no-repeat;
 }
 
@@ -106,7 +102,7 @@ form {
 .error {
   display: block;
   font-size: 14px;
-  color: #C23628;
+  color: #c23628;
   font-weight: bold;
 }
 
@@ -124,38 +120,42 @@ form {
   width: 100%;
   margin-top: 1em;
   padding: 1pc;
-	border: 0;
-	border-radius: 0.317rem;
-  background-color: #5C6AC4;
+  border: 0;
+  border-radius: 0.317rem;
+  background-color: #5c6ac4;
   font-family: Helvetica, sans-serif;
-	color: #FFF;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
   line-height: 1;
-	cursor: pointer;
-	-webkit-appearance: none;
-	-webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 .button:hover {
-	opacity: 0.85;
+  opacity: 0.85;
 }
 
 .button:active {
-	box-shadow: inset 0 3px 4px hsla(0, 0%, 0%, 0.2);
+  box-shadow: inset 0 3px 4px hsla(0, 0%, 0%, 0.2);
 }
 
 .button:focus {
-	outline: thin dotted #FFF;
-	outline: none /*5px auto -webkit-focus-ring-color*/;
-	outline-offset: -2px;
+  outline: thin dotted #fff;
+  outline: none;
+  outline-offset: -2px;
 }
 
 /* responsive styling added */
 
 @media only screen and (max-width: 320px) {
-  h1,
+  .subscribe {
+    width: 80%;
+  }
+
+  #header h1,
   .thankyou h3,
   .thankyou p {
     font-size: 14px;
@@ -167,17 +167,21 @@ form {
 
   form,
   .button,
-  input[type=text],
+  input[type="text"],
   select {
     font-size: 12px;
   }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 375px) {
-  h1,
+  .subscribe {
+    width: 80%;
+  }
+
+  #header h1,
   .thankyou h3,
   .thankyou p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .error {
@@ -186,22 +190,26 @@ form {
 
   form,
   .button,
-  input[type=text],
+  input[type="text"],
   select {
     font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 425px) {
-  h1,
+  .subscribe {
+    width: 80%;
+  }
+
+  #header h1,
   .thankyou h3,
   .thankyou p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   form,
   .button,
-  input[type=text],
+  input[type="text"],
   select {
     font-size: 14px;
   }
@@ -209,9 +217,7 @@ form {
 
 @media only screen and (max-width: 425px) {
   select.minimal {
-    background-position:
-      calc(100% - 22px) calc(1em + 1px),     
-      calc(100% - 17px) calc(1em + 1px),     
-      calc(100% - 2.3em) 0.5em;
+    background-position: calc(100% - 22px) calc(1em + 1px),
+      calc(100% - 17px) calc(1em + 1px), calc(100% - 2.3em) 0.5em;
   }
 }

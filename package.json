@@ -12,5 +12,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "keywords": [],
+  "description":
+    "Create a form:\n- If the email input does not validate, an error message should be rendered below the field.\n- If the email input is valid, the form should submit without reloading or navigating away from the page.\n- The value of each field should be logged in the browser console.\n- It should show a loading state for 2 seconds, to simulate an HTTP request.\n- It should allow only a single submission. Subsequent attempts to submit should be ignored after the initial submission.\n- After the simulated request, a \"thank you\" message should replace the form without refreshing the page."
 }
