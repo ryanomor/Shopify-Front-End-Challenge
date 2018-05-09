@@ -5,8 +5,11 @@
 }
 
 header {
-  font-size: 24px;
   margin-right: 1.5em;
+}
+
+header h1 {
+  font-size: 24px;
 }
 
 hr {   /* My horizontal rule class */
