@@ -4,11 +4,11 @@
   max-width: 562px;
 }
 
-header {
+#header {
   margin-right: 1.5em;
 }
 
-header h1 {
+#header h1 {
   font-size: 24px;
 }
 
