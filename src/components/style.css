@@ -1,11 +1,12 @@
 .subscribe {
   margin: 0 auto;
   margin-top: 2em;
-  width: 80%;
+  max-width: 562px;
 }
 
-h1 {
-  font-size: 54px;
+header {
+  font-size: 24px;
+  margin-right: 1.5em;
 }
 
 hr {   /* My horizontal rule class */
@@ -22,7 +23,7 @@ input[type=text] {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
   font-family: Helvetica, 'Helvetica Neue', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0.67857143em 1em;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -52,10 +53,10 @@ select {
   color: rgba(191, 191, 191, 0.87);
   border: thin solid #ccc;
   border-radius: 4px;
-  width: 35%;
+  width: 45%;
   display: inline-block;
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0.5em 2.75em 0.5em 1em;
   cursor: pointer;
 
@@ -90,7 +91,7 @@ select.minimal {
 
 form {
   margin-top: 3em;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 200;
 }
 
@@ -111,7 +112,7 @@ form {
 }
 
 .thankyou p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 200;
 }
 
@@ -127,7 +128,7 @@ form {
 	color: #FFF;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
   line-height: 1;
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -209,23 +210,5 @@ form {
       calc(100% - 22px) calc(1em + 1px),     
       calc(100% - 17px) calc(1em + 1px),     
       calc(100% - 2.3em) 0.5em;
-  }
-}
-
-@media only screen and (min-width: 426px) and (max-width: 768px) {
-  h1 {
-    font-size: 34px;
-  }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  h1 {
-    font-size: 44px;
-  }
-}
-
-@media only screen and (min-width: 1025px) and (max-width: 1164px) {
-  h1 {
-    font-size: 48px;
   }
 }

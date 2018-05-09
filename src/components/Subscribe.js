@@ -72,8 +72,10 @@ class App extends Component {
     const { emailInput, message, interest, buttonText, submitted } = this.state;
     return (
       <div className="subscribe">
-        <h1>Stay up to date with ecommerce trends with Shopify's newsletter</h1>
-        <hr />
+        <div id="header">
+          <h1>Stay up to date with ecommerce trends with Shopify's newsletter</h1>
+          <hr />
+        </div>
 
         {submitted ? (
           <Thanks /> // render the thank you component if submitted is true
